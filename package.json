@@ -1,0 +1,19 @@
+{
+  "name": "module1",
+  "version": "1.0.0",
+  "description": "proyecto del modulo 1",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wilmer007/module1.git"
+  },
+  "author": "Wilmer Isaac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wilmer007/module1/issues"
+  },
+  "homepage": "https://github.com/Wilmer007/module1#readme"
+}
