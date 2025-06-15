@@ -1,5 +1,5 @@
 .jumbotron{
-	background-color:yellow;
+	background-color:gray;
 	color: black;
 	margin-top: 50px;
 }
@@ -8,7 +8,7 @@
 	width: 100%;
 	position: absolute;
 	left: 0;
-	bottom:0;
+	bottom: -10px;;
 	color: blueviolet;
 }
 
