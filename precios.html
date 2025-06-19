@@ -3,117 +3,134 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-
-
+    <link rel="stylesheet" href="css/main.css">
     <title>Hoteles</title>
 </head>
 <body>
-<nav class="navbar navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Hoteles</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item "><a class="nav-link" href="./index.html">Home</a></li>
-        <li class="nav-item "><a class="nav-link" href="#">Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Precios</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Términos y condiciones</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-    </ul>
-</div>
-</nav>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-3">Hoteles dreaming</h1>      
-    </div>
-    </div>
-    <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current ="page">Precios</li>
-             </ol>
-            </nav>
-            
-            <div class="table-responsive">
-            <table class="table table-striped"> 
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col"class="thead-dark">Nombre</th>
-                        <th scope="col"class="thead-dark">Precio</th>
-                        <th>Descripción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Hotel Playa</td>
-                        <td>$100</td>
-                        <td>Disfruta de la playa con todas las comodidades.</td>
-                    </tr>
-                    <tr>
-                        <td>Hotel Montaña</td>
-                        <td>$120</td>
-                        <td>Relájate en un entorno montañoso y fresco.</td>
-                    </tr>
-                    <tr>
-                        <td>Hotel Ciudad</td>
-                        <td>$80</td>
-                        <td>Explora la ciudad con todas las atracciones cerca.</td>
-                    </tr>
-                </tbody>
-            </table>
-    </div>
-    </div>
-    <div class="d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-            <div class="card-header" style="background-color: yellow;">
-                Tarjetas Aceptables
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Visa</li>
-                <li class="list-group-item">Mastercard</li>
-                <li class="list-group-item">American Express</li>
-                <li class="list-group-item">Discover</li>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Hoteles</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Precios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Términos y condiciones</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
             </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid mt-5">
+        <div class="container">
+            <h1 class="display-3">Hoteles dreaming</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Precios</li>
+            </ol>
+        </nav>
+
+        <ul class="nav nav-pills" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="compara-tab" data-bs-toggle="pill" href="#compara" role="tab" aria-controls="compara" aria-selected="true">Comparar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tarjetas-tab" data-bs-toggle="pill" href="#tarjetas" role="tab" aria-controls="tarjetas" aria-selected="false">Tarjetas Aceptables</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="comentarios-tab" data-bs-toggle="pill" href="#comentarios" role="tab" aria-controls="comentarios" aria-selected="false">Comentarios</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <!-- Comparar Tab -->
+            <div class="tab-pane fade show active" id="compara" role="tabpanel" aria-labelledby="compara-tab">
+                <div class="table-responsive mt-3">
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hotel Ciudad</td>
+                                <td>$80</td>
+                                <td>Explora la ciudad con todas las atracciones cerca.</td>
+                            </tr>
+                            <tr>
+                                <td>Hotel Playa</td>
+                                <td>$100</td>
+                                <td>Disfruta de la playa con todas las comodidades.</td>
+                            </tr>
+                            <tr>
+                                <td>Hotel Montaña</td>
+                                <td>$120</td>
+                                <td>Relájate en un entorno montañoso y fresco.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Tarjetas Tab -->
+            <div class="tab-pane fade" id="tarjetas" role="tabpanel" aria-labelledby="tarjetas-tab">
+                <div class="d-flex justify-content-center mt-3">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header" style="background-color: yellow;">
+                            Tarjetas Aceptables
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Visa</li>
+                            <li class="list-group-item">Mastercard</li>
+                            <li class="list-group-item">American Express</li>
+                            <li class="list-group-item">Discover</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Comentarios Tab -->
+            <div class="tab-pane fade" id="comentarios" role="tabpanel" aria-labelledby="comentarios-tab">
+                <div class="d-flex justify-content-center mt-3">
+                    <h3>Comentarios de Clientes</h3>
+                    <!-- Comentarios content here -->
+                </div>
             </div>
         </div>
     </div>
-          
-            
+
+    <footer class="mt-5">
+        <div class="row">
+            <div class="col-sm-4 d-flex flex-column">
+                <a href="https://www.Facebook.com">Red Facebook</a>
+                <a href="https://www.Instagram.com">Red Instagram</a>
+                <a href="https://www.Twitter.com">Red Twitter</a>
+            </div>
+            <div class="col-sm-4 d-flex flex-column">
+                <address>
+                    <h4>Oficina Principal</h4>
+                    33 calle 11 avenida, Honduras SPS<br>
+                    90899009<br>
+                    Contactogmail.com
+                </address>
+            </div>
+            <div class="col-sm-4 d-flex flex-column align-items-end">
+                <a href="#">Quienes somos</a>
+                <a href="#">Precios</a>
+                <a href="#">Terminos y condiciones</a>
+            </div>
         </div>
-
-    <footer>
-    	<div class="row">
-    	<div class="col-sm-4 d-flex  flex-column">
-    		<p href = "https://www.Facebook.com">Red Facebook</p>
-    		<p href = "https://www.Instagram.com">Red Instagram</p>
-    		<p href = "https://www.Twitter.com">Red Twitter</p>
-
-    	</div>
-
-        <div class="col-sm-4 d-flex flex-column">
-        <address>
-        	<h4>Oficina Principal</h3>
-        	33 calle 11 avenida , Honduras SPS 
-        	90899009
-        	Contactogmail.com
-        	</div>
-        </address>
-
-    	<div class="col-sm-4 d-flex flex-column align-items-end">
-            <p href = "https://www.Facebook.com">Quienes somos</p>
-    		<p href = "https://www.Instagram.com">Precios</p>
-    		<p href = "https://www.Twitter.com">Terminos y condiciones</p>
-    		</div>
-
     </footer>
 
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper/dist/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
