@@ -83,18 +83,63 @@
                 </div>
             </div>
             <!-- Tarjetas Tab -->
+
             <div class="tab-pane fade" id="tarjetas" role="tabpanel" aria-labelledby="tarjetas-tab">
                 <div class="d-flex justify-content-center mt-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 22rem;">
                         <div class="card-header" style="background-color: yellow;">
                             Tarjetas Aceptables
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Visa</li>
-                            <li class="list-group-item">Mastercard</li>
-                            <li class="list-group-item">American Express</li>
-                            <li class="list-group-item">Discover</li>
-                        </ul>
+                        <div class="accordion" id="accordionTarjetas">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingVisa">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVisa" aria-expanded="false" aria-controls="collapseVisa">
+                                        Visa
+                                    </button>
+                                </h2>
+                                <div id="collapseVisa" class="accordion-collapse collapse" aria-labelledby="headingVisa" data-bs-parent="#accordionTarjetas">
+                                    <div class="accordion-body">
+                                        Aceptamos todas las tarjetas Visa emitidas internacionalmente.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingMastercard">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMastercard" aria-expanded="false" aria-controls="collapseMastercard">
+                                        Mastercard
+                                    </button>
+                                </h2>
+                                <div id="collapseMastercard" class="accordion-collapse collapse" aria-labelledby="headingMastercard" data-bs-parent="#accordionTarjetas">
+                                    <div class="accordion-body">
+                                        Mastercard es aceptada en todos nuestros hoteles.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingAmex">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAmex" aria-expanded="false" aria-controls="collapseAmex">
+                                        American Express
+                                    </button>
+                                </h2>
+                                <div id="collapseAmex" class="accordion-collapse collapse" aria-labelledby="headingAmex" data-bs-parent="#accordionTarjetas">
+                                    <div class="accordion-body">
+                                        American Express disponible para reservas y pagos.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingDiscover">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiscover" aria-expanded="false" aria-controls="collapseDiscover">
+                                        Discover
+                                    </button>
+                                </h2>
+                                <div id="collapseDiscover" class="accordion-collapse collapse" aria-labelledby="headingDiscover" data-bs-parent="#accordionTarjetas">
+                                    <div class="accordion-body">
+                                        Discover es aceptada en la mayoría de nuestras ubicaciones.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
