@@ -1,0 +1,44 @@
+$yellow:#ffb3b3;
+$blue:#b3d9ff;
+$green:#b3ffb3;
+$red:#ffb3b3;
+$purple:#d9b3ff;
+$orange:#ffb3b3;
+$black:#000000;     
+
+@mixin margenes($top, $right, $bottom, $left) {
+
+	margin-top: $top;
+	margin-bottom: $bottom;
+}
+
+.jumbotron{
+	background-color:gray;
+	color: black;
+    @include margenes(50px, 0px);
+}
+
+.btn {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: -10px;;
+	color: blueviolet;
+}
+
+.footer { 
+	padding: 15px 15px 0 15px;
+	background-color: black;
+	    @include margenes(20px, 20px);
+
+	
+}
+
+.card-body {
+	flex: 1 150px;
+	    @include margenes(10px, 10px, 10px, 10px);
+}
+
+.footer-address-icon {
+	padding-right: 15px;
+}

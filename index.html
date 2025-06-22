@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!--build:css dist/index.css-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles2.css">
+            <!--endbuild-->
+
+
+
 
 
     <title>Hoteles</title>
@@ -251,7 +256,23 @@
                           <option>Caribe real</option>
                         </select>
                       </div>
-                      <button type="submit" class="btn btn-primary">Enviar Reserva</button>
+                    <button type="submit" class="btn btn-primary" id="enviarReservaBtn">Enviar Reserva</button>
+                    <script>
+                        $(document).ready(function() {
+                            // Change button color on active/not active
+                            $('#enviarReservaBtn').on('mousedown', function() {
+                                $(this).removeClass('btn-primary').addClass('btn-success');
+                            }).on('mouseup mouseleave', function() {
+                                $(this).removeClass('btn-success').addClass('btn-primary');
+                            });
+
+                            $('#enviarReservaBtn').on('click', function(e) {
+                                e.preventDefault();
+                                $('#hotelModal').modal('show');
+                            });
+                        });
+                    </script>
+                      </script>
                     </form>
                   </div>
                 </div>
@@ -284,6 +305,8 @@
     		</div>
 
     </footer>
+
+        <!--build:js dist/index.js-->
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper/dist/popper.min.js"></script>

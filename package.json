@@ -5,7 +5,15 @@
   "main": "index.html",
   "scripts": {
     "dev": "lite-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm run dev\" \"npm run watch:scss\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "clean": "rimraf dist",
+    "imagemin": "imagemin images/* --out-dir=dist/images",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin about.html -d dist --htmlmin -o dist/about.html && usemin contact.html -d dist --htmlmin -o dist/contact.html && usemin services.html -d dist --htmlmin -o dist/services.html && usemin blog.html -d dist --htmlmin -o dist/blog.html && usemin blog-post.html -d dist --htmlmin -o dist/blog-post.html",
+    "buld": "npm run clean && npm run scss && npm run imagemin && npm run usemin && rimraf css/*.css && rimraf css/*.map"
+
   },
   "repository": {
     "type": "git",
@@ -18,12 +26,21 @@
   },
   "homepage": "https://github.com/Wilmer007/module1#readme",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "cssmin": "^0.4.3",
+    "htmlmin": "^0.0.7",
+    "lite-server": "^2.6.1",
+    "node-sass": "^9.0.0",
+    "onchange": "^7.1.0",
+    "rimraf": "^6.0.1",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.6.0"
   },
   "dependencies": {
     "bootstrap": "^5.3.6",
+    "concurrently": "^9.2.0",
     "jquery": "^3.7.1",
     "open-iconic": "^1.1.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "sass": "^1.89.2"
   }
 }
